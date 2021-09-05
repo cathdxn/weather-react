@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
           <h1>{props.data.city}</h1>
         </div>
         <div className="col-6">
-          <Temperature celcius={props.data.temperature} />
+          <Temperature celsius={props.data.temperature} />
         </div>
       </div>
                 <FormattedDate
