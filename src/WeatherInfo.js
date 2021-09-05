@@ -1,6 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import TemperatureConversion from "./TemperatureConversion";
+import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -11,16 +11,16 @@ export default function WeatherInfo(props) {
             Find my location
           </a>
           <h1>{props.data.city}</h1>
-          <FormattedDate
+        </div>
+        <div className="col-6">
+          <Temperature celcius={props.data.temperature} />
+        </div>
+      </div>
+                <FormattedDate
             date={props.data.date}
             sunrise={props.data.sunrise}
             sunset={props.data.sunset}
           />
-        </div>
-        <div className="col-6">
-          <TemperatureConversion celcius={props.data.temperature} />
-        </div>
-      </div>
       <div className="row">
         <div className="weather-description text-capitalize col-6">
           {props.data.description}
