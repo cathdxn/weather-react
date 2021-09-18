@@ -3,23 +3,16 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
   const [city, setCity] = useState(props.city);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    search();
-  }
-
-  function changeCity(event) {
-    setCity(event.target.value);
-  }
-
   function handleResponse(response) {
     setWeather({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
@@ -32,8 +25,17 @@ export default function Weather(props) {
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
-      date: new Date(response.data.dt * 1000)
+      date: new Date(response.data.dt * 1000),
     });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function changeCity(event) {
+    setCity(event.target.value);
   }
 
   function search() {
@@ -62,6 +64,7 @@ export default function Weather(props) {
             </button>
           </form>
           <WeatherInfo data={weather} />
+          <Forecast coordinates={weather.coordinates} />
         </div>
       </div>
     );

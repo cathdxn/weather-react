@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -16,11 +17,11 @@ export default function WeatherInfo(props) {
           <Temperature celsius={props.data.temperature} />
         </div>
       </div>
-                <FormattedDate
-            date={props.data.date}
-            sunrise={props.data.sunrise}
-            sunset={props.data.sunset}
-          />
+      <FormattedDate
+        date={props.data.date}
+        sunrise={props.data.sunrise}
+        sunset={props.data.sunset}
+      />
       <div className="row">
         <div className="weather-description text-capitalize col-6">
           {props.data.description}
@@ -55,6 +56,7 @@ export default function WeatherInfo(props) {
           </li>
         </ul>
       </div>
+      <Forecast />
       <div className="forecast">Next five days...</div>
       <div className="row next-week">
         <div className="col-2 days">
