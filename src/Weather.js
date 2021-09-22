@@ -23,7 +23,7 @@ export default function Weather(props) {
       max: Math.round(response.data.main.temp_max),
       min: Math.round(response.data.main.temp_min),
       description: response.data.weather[0].description,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
       date: new Date(response.data.dt * 1000),
