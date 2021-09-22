@@ -12,7 +12,7 @@ export default function FormattedDate(props) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[currentDay];
   let currentMonth = currentTime.getMonth();
@@ -28,7 +28,7 @@ export default function FormattedDate(props) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
   let month = months[currentMonth];
   let date = currentTime.getDate();
@@ -58,7 +58,7 @@ export default function FormattedDate(props) {
   }
 
   return (
-    <div className="FormattedDate">
+    <div className="FormattedDate row">
       <div className="date">
         {day}, {month} {date} | {hours}:{minutes}
       </div>

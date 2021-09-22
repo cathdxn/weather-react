@@ -1,17 +1,14 @@
 .WeatherInfo h1 {
   font-size: 40px;
-  padding-top: 10px;
 }
-h2 {
-  font-size: 44px;
-  padding-top: 0px;
-  margin: 0px;
+.WeatherInfo {
+  padding-top: 10px;
 }
 ul {
   list-style-type: none;
   font-size: 14px;
   font-weight: 300;
-  padding: 10px 0px 30px 0px;
+  padding-left: 10px !important;
 }
 li {
   margin: 7px 0px;
@@ -42,40 +39,32 @@ a {
   background: #444444;
 }
 .date {
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0.7;
-}
-.sunrise {
-  font-size: 12px;
-}
-
-.today {
-  font-size: 10px;
-}
-.weather-image {
-  padding: 0px;
-}
-
-.weather-details,
-.temperature-details {
-  color: #b1b1b1;
-}
-.temperature-details {
   text-align: right;
 }
+.sunrise {
+  font-size: 14px;
+  text-align: right;
+}
+
+.weather-details {
+  color: #b1b1b1;
+  font-size: 16px;
+}
+
 .next-five-days {
   padding-bottom: 10px;
   opacity: 0.7;
 }
 .next-week {
-  width: fit-page;
+  margin: 0;
 }
 .days {
   border: none;
   border-radius: 4%;
-  margin: auto;
   text-align: center;
-  padding: 5px;
+  padding: 5px 0px;
   font-weight: 200;
   color: #969494;
 }
@@ -88,28 +77,23 @@ a {
 .current-temperature {
   font-size: 65px;
   line-height: 60px;
-  text-align: right;
-  padding: 0px 30px 0px 0px;
 }
 .weather-description {
-  padding-top: 50px;
   font-size: 24px;
 }
 .unit {
-  font-size: 12px;
-  text-align: right;
-  padding-top: 20px;
+  font-size: 24px;
 }
 .unit:hover {
   cursor: pointer;
 }
-.current-location {
-  text-decoration: none;
-  font-size: 12px;
-}
+
 .celsius,
 .fahrenheit {
-  text-decoration: none;
+  position: relative;
+  display: inline-block;
   color: white;
   opacity: 0.8;
+  text-decoration: none;
+  text-align: right;
 }
