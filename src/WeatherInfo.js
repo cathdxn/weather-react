@@ -6,10 +6,10 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
-        <div className="col-6">
+        <div className="col-5">
           <h1>{props.data.city}</h1>
         </div>
-        <div className="col-6 second-column">
+        <div className="col-7 second-column">
           <FormattedDate
             date={props.data.date}
             sunrise={props.data.sunrise}

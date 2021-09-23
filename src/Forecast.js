@@ -22,7 +22,6 @@ export default function Forecast(props) {
   if (loaded) {
     return (
       <div className="Forecast mt-2">
-        <div className="next-five-days">Next five days...</div>
         <div>
           <div className="row next-week">
             <ForecastDay data={forecast[0]} />

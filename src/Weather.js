@@ -66,6 +66,12 @@ export default function Weather(props) {
           </form>
           <WeatherInfo data={weather} />
           <Forecast longitude={weather.lon} latitude={weather.lat} />
+          <footer>
+            <a href="https://github.com/cathdxn/weather-react">
+              Open-sourced code
+            </a>{" "}
+            by Catherine Dixon
+          </footer>
         </div>
       </div>
     );
